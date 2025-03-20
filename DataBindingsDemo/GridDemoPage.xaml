@@ -6,6 +6,7 @@
     <Grid RowDefinitions="100, *, Auto"
           ColumnDefinitions="100, *, Auto"
           Margin="10">
+        <Grid.Children>
         <Label BackgroundColor="White" 
                Text="100x100"
                TextColor="Red">
@@ -31,5 +32,6 @@
                Grid.Column="2"
                Text="Prilagođeno"
                BackgroundColor="Red"/>
+        </Grid.Children>
     </Grid>
 </ContentPage>
