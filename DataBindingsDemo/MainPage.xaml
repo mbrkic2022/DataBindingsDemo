@@ -9,16 +9,22 @@
             <VerticalStackLayout
             Padding="30,0"
             Spacing="25"
-            Margin="10">
-                <Button
-                x:Name="GreetMeBtn"
-                Text="Say hello" 
-                Clicked="GreetMeBtn_Clicked"/>
-                <Label
-                    x:Name="GreetingLbl"
-                Text="Hello"/>
+            Margin="10, 20, 10, 10">
                 <Entry
                     x:Name="NameEntry" />
+                <Label
+                    x:Name="GreetingLbl"
+                    Text="Hello"/>
+                <Button
+                    x:Name="GreetMeBtn"
+                    FontSize="Medium"
+                    CornerRadius="30"
+                    Text="Say hello" 
+                    Clicked="GreetMeBtn_Clicked"/>
+                <Label x:Name="SliderValueLbl"/>
+                <Slider x:Name="DemoSld" 
+                        Maximum="100" 
+                        ValueChanged="Slider_ValueChanged"/>
             </VerticalStackLayout>
         </ScrollView>
     </ContentPage.Content>
