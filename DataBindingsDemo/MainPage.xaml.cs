@@ -22,6 +22,12 @@
         {
             SliderValueLbl.Text = e.NewValue.ToString("F2");
         }
+
+        private async void NavigateBtn_Clicked(object sender, EventArgs e)
+        {
+            await DisplayAlert("Navigation", "You will be redirected to another page", "Ok");
+            await Shell.Current.GoToAsync("//GridDemoPage");
+        }
     }
 
 }

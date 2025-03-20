@@ -25,6 +25,12 @@
                 <Slider x:Name="DemoSld" 
                         Maximum="100" 
                         ValueChanged="Slider_ValueChanged"/>
+                <Button
+                    x:Name="NavigateBtn"
+                    FontSize="Medium"
+                    CornerRadius="30"
+                    Text="Go to grid" 
+                    Clicked="NavigateBtn_Clicked"/>
             </VerticalStackLayout>
         </ScrollView>
     </ContentPage.Content>

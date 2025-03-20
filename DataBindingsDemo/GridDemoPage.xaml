@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DataBindingsDemo.GridDemoPage"
+             Title="GridDemoPage">
+    <Grid RowDefinitions="100, *, Auto"
+          ColumnDefinitions="100, *, Auto"
+          Margin="10">
+        <Label BackgroundColor="White" 
+               Text="100x100"
+               TextColor="Red">
+        </Label>
+        <Label Grid.Row="0" 
+               Grid.Column="1"
+               Grid.ColumnSpan="2"
+               Text="Spojeno s prethodnom ćelijom"
+               BackgroundColor="Grey"/>
+        <Label Grid.Row="1"
+               Grid.RowSpan="2"
+               Text="Spajanje redaka"
+               BackgroundColor="Blue"/>
+        <Label Grid.Row="1" 
+               Grid.Column="1"
+               BackgroundColor="Yellow"
+               Text="Sav preostali prostor"/>
+        <Label Grid.Row="1"
+               Grid.Column="2"/>
+        <Label Grid.Row="2" Grid.Column="1"
+               BackgroundColor="White"/>
+        <Label Grid.Row="2"
+               Grid.Column="2"
+               Text="Prilagođeno"
+               BackgroundColor="Red"/>
+    </Grid>
+</ContentPage>
