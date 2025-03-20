@@ -14,6 +14,7 @@
         {
             string greeting = "Hello, " + NameEntry.Text;
             GreetingLbl.Text = greeting;
+            NameEntry.Text = "";
         }
     }
 
