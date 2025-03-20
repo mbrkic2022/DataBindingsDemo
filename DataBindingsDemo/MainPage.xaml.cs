@@ -7,6 +7,11 @@
         {
             InitializeComponent();
             SliderValueLbl.Text = DemoSld.Value.ToString("F2");
+            Binding binding = new Binding();
+            Person person = new Person() { Age = "25", Name = "John" };
+            binding.Source = person;
+            binding.Path = "Name";
+            ObjectLbl.SetBinding(Label.TextProperty, binding);
         }
 
 
