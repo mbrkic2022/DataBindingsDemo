@@ -6,6 +6,7 @@
         public MainPage()
         {
             InitializeComponent();
+            SliderValueLbl.Text = DemoSld.Value.ToString("F2");
         }
 
 
@@ -15,6 +16,11 @@
             string greeting = "Hello, " + NameEntry.Text;
             GreetingLbl.Text = greeting;
             NameEntry.Text = "";
+        }
+
+        private void Slider_ValueChanged(object sender, ValueChangedEventArgs e)
+        {
+            SliderValueLbl.Text = e.NewValue.ToString("F2");
         }
     }
 

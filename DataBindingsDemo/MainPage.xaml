@@ -21,7 +21,10 @@
                     CornerRadius="30"
                     Text="Say hello" 
                     Clicked="GreetMeBtn_Clicked"/>
-
+                <Label x:Name="SliderValueLbl"/>
+                <Slider x:Name="DemoSld" 
+                        Maximum="100" 
+                        ValueChanged="Slider_ValueChanged"/>
             </VerticalStackLayout>
         </ScrollView>
     </ContentPage.Content>
