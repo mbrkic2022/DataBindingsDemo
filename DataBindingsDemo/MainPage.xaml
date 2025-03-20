@@ -13,8 +13,11 @@
                 <Entry
                     x:Name="NameEntry" />
                 <Label
+                    HorizontalTextAlignment="Center"
                     x:Name="GreetingLbl"
-                    Text="Hello"/>
+                    Text="Hello"
+                    BindingContext="{x:Reference Name=DemoSld}"
+                    Rotation="{Binding Path=Value}"/>
                 <Button
                     x:Name="GreetMeBtn"
                     FontSize="Medium"
@@ -23,7 +26,7 @@
                     Clicked="GreetMeBtn_Clicked"/>
                 <Label x:Name="SliderValueLbl"/>
                 <Slider x:Name="DemoSld" 
-                        Maximum="100" 
+                        Maximum="360" 
                         ValueChanged="Slider_ValueChanged"/>
                 <Button
                     x:Name="NavigateBtn"
@@ -31,6 +34,26 @@
                     CornerRadius="30"
                     Text="Go to grid" 
                     Clicked="NavigateBtn_Clicked"/>
+                <Label x:Name="MultipleBindingsLbl"
+                       Text="Data Binding Basics"
+                       HorizontalTextAlignment="Center"/>
+                <Slider x:Name="ScaleSld" 
+                        Maximum="10"
+                        BindingContext="{x:Reference MultipleBindingsLbl}"
+                        Value="{Binding Scale, Mode=TwoWay}"/>
+                <Slider x:Name="XSld" 
+                        Maximum="360"
+                        BindingContext="{x:Reference MultipleBindingsLbl}"
+                        Value="{Binding RotationX, Mode=OneWayToSource}"/>
+                <Slider x:Name="YSld" 
+                        Maximum="360"
+                        BindingContext="{x:Reference MultipleBindingsLbl}"
+                        Value="{Binding RotationY, Mode=OneWayToSource}"/>
+                <Slider x:Name="RotateSld" 
+                        Maximum="360"
+                        BindingContext="{x:Reference MultipleBindingsLbl}"
+                        Value="{Binding Rotation, Mode=OneWayToSource}"
+                        />
             </VerticalStackLayout>
         </ScrollView>
     </ContentPage.Content>
