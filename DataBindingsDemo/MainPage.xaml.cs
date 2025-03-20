@@ -9,7 +9,7 @@
             SliderValueLbl.Text = DemoSld.Value.ToString("F2");
             Person person = new Person() { Age = "25", Name = "Anna" };
             ObjectLbl.BindingContext = person;
-            ObjectLbl.SetBinding(Label.TextProperty, "Name");
+            //ObjectLbl.SetBinding(Label.TextProperty, "Name");
         }
 
 

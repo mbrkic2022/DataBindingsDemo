@@ -9,7 +9,8 @@
             Padding="30,0"
             Spacing="25"
             Margin="10, 20, 10, 10">
-                <Label x:Name="ObjectLbl"/>
+                <Label x:Name="ObjectLbl" 
+                       Text="{Binding Name}"/>
                 <Entry
                     x:Name="NameEntry" />
                 <Label
